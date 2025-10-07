@@ -27,7 +27,7 @@ app.use('*', (req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/health_wellness', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
