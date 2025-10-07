@@ -11,7 +11,6 @@
         </div>
 
         <form @submit.prevent="handleRegister" class="space-y-6">
-          <!-- Personal Information -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="name" class="label">Full Name *</label>
@@ -56,7 +55,6 @@
             </div>
           </div>
 
-          <!-- Password Fields -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="password" class="label">Password *</label>
@@ -117,7 +115,6 @@
             </div>
           </div>
 
-          <!-- Physical Information -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="age" class="label">Age</label>
@@ -166,7 +163,6 @@
             </div>
           </div>
 
-          <!-- Physical Measurements -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="height" class="label">Height (cm)</label>
@@ -214,7 +210,6 @@
             </div>
           </div>
 
-          <!-- Health Goals -->
           <div>
             <label class="label">Health Goals (Select all that apply)</label>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
@@ -233,7 +228,6 @@
             </div>
           </div>
 
-          <!-- Activity Level -->
           <div>
             <label for="activityLevel" class="label">Activity Level</label>
             <div class="relative">
@@ -259,7 +253,6 @@
             </p>
           </div>
 
-          <!-- Terms and Conditions -->
           <div class="flex items-start">
             <input
               id="terms"
@@ -278,7 +271,6 @@
             {{ errors.acceptTerms }}
           </p>
 
-          <!-- Error Message -->
           <div v-if="error" class="bg-red-50 border border-red-200 rounded-lg p-4">
             <div class="flex">
               <AlertCircle class="w-5 h-5 text-red-400 mr-2" />
@@ -286,7 +278,6 @@
             </div>
           </div>
 
-          <!-- Submit Button -->
           <button
             type="submit"
             class="btn btn-primary w-full py-3"
@@ -297,7 +288,6 @@
             {{ loading ? 'Creating Account...' : 'Create Account' }}
           </button>
 
-          <!-- Login Link -->
           <div class="text-center">
             <p class="text-sm text-gray-600">
               Already have an account?

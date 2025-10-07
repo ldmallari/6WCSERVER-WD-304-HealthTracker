@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <!-- Header -->
       <div class="mb-8">
         <h1 class="text-3xl font-bold text-gray-900 mb-2 flex items-center">
           <User class="w-8 h-8 mr-3 text-primary-600" />
@@ -11,9 +10,7 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Profile Information -->
         <div class="lg:col-span-2 space-y-6">
-          <!-- Personal Information -->
           <div class="card">
             <div class="p-6 border-b border-gray-200">
               <h2 class="text-xl font-semibold text-gray-900 flex items-center">
@@ -132,7 +129,6 @@
             </div>
           </div>
 
-          <!-- Health Goals -->
           <div class="card">
             <div class="p-6 border-b border-gray-200">
               <h2 class="text-xl font-semibold text-gray-900 flex items-center">
@@ -182,7 +178,6 @@
             </div>
           </div>
 
-          <!-- Change Password -->
           <div class="card">
             <div class="p-6 border-b border-gray-200">
               <h2 class="text-xl font-semibold text-gray-900 flex items-center">
@@ -289,9 +284,7 @@
           </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="space-y-6">
-          <!-- Profile Summary -->
           <div class="card p-6">
             <div class="text-center">
               <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -316,7 +309,6 @@
             </div>
           </div>
 
-          <!-- Quick Actions -->
           <div class="card p-6">
             <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
             <div class="space-y-3">
@@ -440,7 +432,6 @@ export default {
       profileSuccess.value = ''
 
       try {
-        // TODO: Implement profile update
         await new Promise(resolve => setTimeout(resolve, 1000))
         profileSuccess.value = 'Profile updated successfully!'
       } catch (error) {
@@ -453,7 +444,6 @@ export default {
     const updateGoals = async () => {
       goalsLoading.value = true
       try {
-        // TODO: Implement goals update
         await new Promise(resolve => setTimeout(resolve, 1000))
       } catch (error) {
         console.error('Error updating goals:', error)
@@ -468,7 +458,6 @@ export default {
       passwordSuccess.value = ''
 
       try {
-        // TODO: Implement password change
         await new Promise(resolve => setTimeout(resolve, 1000))
         passwordSuccess.value = 'Password changed successfully!'
         passwordForm.currentPassword = ''

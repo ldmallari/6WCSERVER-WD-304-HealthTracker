@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <!-- Welcome Section -->
       <div class="mb-8">
         <div class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
           <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -21,7 +20,6 @@
         </div>
       </div>
 
-      <!-- Quick Stats -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div class="card p-6 text-center group hover:scale-105 transition-transform duration-200">
           <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-200 transition-colors">
@@ -56,9 +54,7 @@
         </div>
       </div>
 
-      <!-- Main Content -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Recent Activity -->
         <div class="lg:col-span-2">
           <div class="card">
             <div class="p-6 border-b border-gray-200">
@@ -112,9 +108,7 @@
           </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="space-y-6">
-          <!-- Quick Actions -->
           <div class="card p-6">
             <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
               <Zap class="w-5 h-5 mr-2 text-yellow-600" />
@@ -136,7 +130,6 @@
             </div>
           </div>
 
-          <!-- Health Tips -->
           <div class="card p-6">
             <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
               <Lightbulb class="w-5 h-5 mr-2 text-yellow-600" />
@@ -263,11 +256,9 @@ export default {
     const fetchDashboardData = async () => {
       loading.value = true
       try {
-        // Fetch recent logs
         await store.dispatch('healthLogs/fetchLogs', { limit: 5 })
         recentLogs.value = store.getters['healthLogs/allLogs']
 
-        // Fetch today's stats
         const today = new Date().toISOString().split('T')[0]
         await store.dispatch('healthLogs/fetchStats', {
           startDate: today,

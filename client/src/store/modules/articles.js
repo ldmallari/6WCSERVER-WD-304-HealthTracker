@@ -48,7 +48,6 @@ const actions = {
       const url = new URL('https://dev.to/api/articles')
       url.searchParams.set('per_page', String(perPage))
       
-      // Map our health categories to dev.to tags
       const healthTags = {
         'nutrition': 'nutrition',
         'exercise': 'fitness',
@@ -61,7 +60,6 @@ const actions = {
       if (params.category && healthTags[params.category]) {
         url.searchParams.set('tag', healthTags[params.category])
       } else {
-        // Default to health-related content
         url.searchParams.set('tag', 'health')
       }
 
@@ -90,7 +88,6 @@ const actions = {
 
       let filtered = mapped
 
-      // Filter for health and wellness related content
       const healthKeywords = ['health', 'wellness', 'fitness', 'nutrition', 'mental', 'exercise', 'diet', 'medical', 'sleep', 'lifestyle', 'wellbeing', 'therapy', 'mindfulness', 'yoga', 'meditation']
       
       filtered = filtered.filter(article => {

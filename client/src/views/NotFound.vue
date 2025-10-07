@@ -2,7 +2,6 @@
   <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full text-center">
       <div class="card p-12">
-        <!-- 404 Illustration -->
         <div class="mb-8">
           <div class="w-32 h-32 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <AlertTriangle class="w-16 h-16 text-primary-600" />
@@ -14,7 +13,6 @@
           </p>
         </div>
 
-        <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <router-link to="/" class="btn btn-primary">
             <Home class="w-4 h-4 mr-2" />
@@ -26,7 +24,6 @@
           </button>
         </div>
 
-        <!-- Helpful Links -->
         <div class="mt-12 pt-8 border-t border-gray-200">
           <p class="text-sm text-gray-600 mb-4">Maybe you were looking for:</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">

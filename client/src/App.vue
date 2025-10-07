@@ -35,7 +35,6 @@ export default {
 </script>
 
 <style>
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   @apply w-2;
 }
@@ -52,7 +51,6 @@ export default {
   @apply bg-gray-500;
 }
 
-/* Vue transitions */
 .fade-enter-active, .fade-leave-active {
   @apply transition-opacity duration-300;
 }

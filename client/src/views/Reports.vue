@@ -444,7 +444,6 @@ export default {
       const daysDiff = Math.ceil((new Date(dateRange.endDate) - new Date(dateRange.startDate)) / (1000 * 60 * 60 * 24))
       
       if (daysDiff <= 7) {
-        // Daily data
         const data = new Array(daysDiff + 1).fill(0)
         exerciseLogs.forEach(log => {
           const logDate = new Date(log.date)
@@ -455,7 +454,6 @@ export default {
         })
         return data
       } else {
-        // Weekly or monthly data
         const data = new Array(generateChartLabels().length).fill(0)
         exerciseLogs.forEach(log => {
           const logDate = new Date(log.date)
@@ -473,7 +471,6 @@ export default {
       const daysDiff = Math.ceil((new Date(dateRange.endDate) - new Date(dateRange.startDate)) / (1000 * 60 * 60 * 24))
       
       if (daysDiff <= 7) {
-        // Daily data
         const data = new Array(daysDiff + 1).fill(0)
         sleepLogs.forEach(log => {
           const logDate = new Date(log.date)
@@ -484,7 +481,6 @@ export default {
         })
         return data
       } else {
-        // Weekly or monthly data
         const data = new Array(generateChartLabels().length).fill(0)
         const periodCounts = new Array(data.length).fill(0)
         
@@ -506,7 +502,6 @@ export default {
       const daysDiff = Math.ceil((new Date(dateRange.endDate) - new Date(dateRange.startDate)) / (1000 * 60 * 60 * 24))
       
       if (daysDiff <= 7) {
-        // Daily data
         const data = new Array(daysDiff + 1).fill(0)
         waterLogs.forEach(log => {
           const logDate = new Date(log.date)
@@ -517,7 +512,6 @@ export default {
         })
         return data
       } else {
-        // Weekly or monthly data
         const data = new Array(generateChartLabels().length).fill(0)
         waterLogs.forEach(log => {
           const logDate = new Date(log.date)
